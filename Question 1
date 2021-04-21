@@ -1,1 +1,13 @@
-
+Staff: The Staff members at the hospital
+Patient Appointments: the appointments the patients have
+Ward: the wards at the hospital
+Inpatients: the patients residing in Inpatient.
+Patients: the Patients at the hospital
+Outpatients: the patients residing in Outpatient.
+Patient's Next of Kin: the patient's listed next of kin.
+Patient medication: patients' respective medications.
+Pharmaceutical supplies: drug supply of the hospital.
+Pharmaceutical supplies: drug supply of the ward.
+Suppliers: companies that supply the hospital with healthcare goods.
+Surgical and Nonsurgical Supplies: nonpharmaceutical supplies for the hospital, both surgical and not.
+Local Doctors: doctors local to the area.
