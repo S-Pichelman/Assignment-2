@@ -1,62 +1,62 @@
-Staff (1..*) schedules (0..*) Patient Appointments
+Staff (1..*) schedules (0..M) Patient Appointments
 One staff member creates multiple appointments.
 One appointment can only be scheduled by one staff member at a time.
 All apointment data, including those made in the apst, is stored.
 
-Staff (1..*) works in Ward (1..*)
+Staff (1..M) works in Ward (1..M)
 many staff members can work in one ward.
 One staff member can only belong to multiple wards.
 Staff members can change wards.
 
-Inpatients (1..*) reside in (1..*) ward
+Inpatients (1..*) reside in (1..1) ward
 Many inpatients can reside in 1 ward.
 one inpatinet can only reside in one ward at a time.
 
-Inpatients (0..*) are (1..*) patients
+Inpatients (0..1) are (1..1) patients
 One Inpatient is always one patient.
 One Patient is not always one inpatient.
 
-Outpatients (0..*) are (1..*) patients
+Outpatients (0..1) are (1..1) patients
 One Outpatient is always one Patient.
 One Patient is not always one Outpatient.
 
-Patients (1..*) list (0..*) Patient's Next Of Kin
+Patients (1..M) list (0..M) Patient's Next Of Kin
 One patient can list many Next of Kin or none.
 One Next of Kin can be listed by many patients or one.
 
-Local Doctors (0..*) care for (1..*) Patients
+Local Doctors (0..1) care for (1..M) Patients
 Local Doctors can care for many patients.
 patients can have one or no local doctor.
 
-Patients (1..*) use (0..*) Patient Medication 
+Patients (1..1) use (0..M) Patient Medication 
 one patient can have many patient medications
 patient medication belongs to only one patient
 
-Pharmaceutial Supplies (1..*) stock (0..*) Patient Medication
+Pharmaceutial Supplies (1..1) stock (0..M) Patient Medication
 One Patient Medication only correlates to one Pharmaceutial Supply.
 one pharmaceutial Supply only stocks one patient medication.
 
-Suppliers (1..*) stock (0..*) Pharmaceutial Supplies
+Suppliers (1..1) stock (0..M) Pharmaceutial Supplies
 One Supplier can stock many Pharmaceutial Supplies
 One Pharmaceutial Supply can only be stocked by one supplier
 
-Suppliers (1..*) stock (0..*) Surgical and nonsurgical supplies
+Suppliers (1..1) stock (0..M) Surgical and nonsurgical supplies
 One Supplier can stock many Surgical and nonsurgical supplies
 One Surgical and nonsurgical supply can only be stocked by one supplier
 
-Ward (1..*) contains (1..*) Ward Requisitions
+Ward (1..1) contains (1..M) Ward Requisitions
 One ward can contain many Ward Requisitions
 Ward Requisitions can only belong to one ward
 
-Ward Requisitions (1..*) contain (0..*) Surgical and nonsurgical supplies
+Ward Requisitions (1..1) contain (0..M) Surgical and nonsurgical supplies
 One Ward Requisition can only stock one Surgical and nonsurgical supply
 One Surgical and nonsurgical supply can only belong belong to one Ward Requisition at a time
 
-Ward Requisitions (1..*) contain (0..*) Pharmaceutial Supplies
+Ward Requisitions (1..1) contain (0..M) Pharmaceutial Supplies
 One Ward Requisition can only stock one Pharmaceutial Supply
 One Pharmaceutial Supply can only belong belong to one Ward Requisition at a time
 The pharmaceutical supplies used by each ward are monitored.
 
-Patients (1..*) have (0..*) Patient Appointments
+Patients (1..1) have (0..M) Patient Appointments
 One Patient can have many Patient Appointments scheduled
 one Patient Appointment can only be for one patient.
